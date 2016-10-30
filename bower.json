@@ -1,0 +1,27 @@
+{
+  "name": "ngtrello",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Nikolay Kostov <kostov.dev@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
+  },
+  "devDependencies": {
+    "materialize": "^0.97.7",
+    "angular-materialize": "^0.2.1",
+    "angular-resource": "^1.5.8",
+    "angular-material": "^1.1.1"
+  }
+}
