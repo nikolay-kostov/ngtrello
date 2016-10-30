@@ -19,6 +19,6 @@ function config ($stateProvider) {
 
     function clientController ($scope) {
         $scope.inheritToChilds = 'true';
-        this.appClient = 'abstract app.client';
+        this.appClient = 'abstract ngTrello.client';
     }
 }
