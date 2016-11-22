@@ -1,9 +1,3 @@
-/***
- * User service
- * + log in user
- * + register newuser
- **/
-
 UserService.$inject = ['$resource'];
 
 function UserService ($resource){
@@ -22,6 +16,7 @@ function UserService ($resource){
             },
             isArray: false
         },
+
         registerUser: {
             method: 'POST',
             params: {

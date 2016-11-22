@@ -1,7 +1,7 @@
 import 'angular';
 import _ from 'underscore';
 
-export default  angular.module('ngTrello.filters.userNameFilter', [])
+export default  angular.module('app.filters.userNameFilter', [])
     .filter('userNameFilter', ['$parse', function( $parse ) {
     return function(collection, search) {
 
@@ -10,5 +10,5 @@ export default  angular.module('ngTrello.filters.userNameFilter', [])
         });
 
         return result ? true : false;
-    }
+    };
 }]).name;

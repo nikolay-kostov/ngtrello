@@ -1,7 +1,7 @@
 import 'angular';
 import _ from 'underscore';
 
-export default  angular.module('ngTrello.filters.credentialsFilter', [])
+export default  angular.module('app.filters.credentialsFilter', [])
     .filter('credentialsFilter', [function() {
         return function(collection, search) {
 
@@ -11,5 +11,5 @@ export default  angular.module('ngTrello.filters.credentialsFilter', [])
             });
 
             return result;
-        }
+        };
     }]).name;
