@@ -2,9 +2,9 @@ import {namespace,translations} from './login.translations';
 
 export default LoginController;
 
-LoginController.$inject = ['$state', 'UserService', 'byUserNameFilter', 'ProfileService','Translations'];
+LoginController.$inject = ['$state', 'UserService', 'filterByCredentialsFilter', 'ProfileService','Translations'];
 
-function LoginController ($state, UserService, byUserName, ProfileService, Translations) {
+function LoginController ($state, UserService, filterByCredentials, ProfileService, Translations) {
 
     var vm = this;
 
@@ -35,15 +35,14 @@ function LoginController ($state, UserService, byUserName, ProfileService, Trans
 
         Translations.executeTranslations(namespace,translations).then(function (translations) {
             vm.translations = translations;
-            console.log(vm.translations);
+            //console.log(vm.translations);
         });
     }
 
     vm.initiateLogin = function () {
 
        if( vm.loginForm.$valid) {
-           var userData = byUserName(users, vm.userData);
-
+           var userData = filterByCredentials(users, vm.userData);
            if (userData) {
                 ProfileService.setProfile(userData);
                $state.go('app.user.home');

@@ -1,8 +1,8 @@
 import 'angular';
 import _ from 'underscore';
 
-export default  angular.module('app.filters.credentialsFilter', [])
-    .filter('credentialsFilter', [function() {
+export default  angular.module('app.filters.filterByCredentials', [])
+    .filter('filterByCredentials', [function() {
         return function(collection, search) {
 
             var result = _.findWhere(collection, {

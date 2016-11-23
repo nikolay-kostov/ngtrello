@@ -1,5 +1,5 @@
 /***
- * Configure Home module
+ * Configure User Home module
  **/
 
 import template from './home.tpl.html';

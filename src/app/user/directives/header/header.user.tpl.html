@@ -1,12 +1,13 @@
 <nav>
-    <div class="nav-wrapper teal lighten-1">
-        <ul class="left">
-            <li><a ui-sref="app.user.home"><i class="material-icons">home</i></a></li>
-        </ul>
-        <a ui-sref="app.guest.home" class="brand-logo center">ngTrello</a>
-        <ul class="right">
-            <li><a><i class="tiny material-icons left">perm_identity</i> My Profile</a></li>
-            <li><a ui-sref="app.user.logout"><i class="tiny material-icons left">settings_power</i> Logout</a></li>
-        </ul>
+    <div class="nav-wrapper blue">
+        <a ui-sref="app.user.board" class="brand-logo center">
+            <img src="./img/trello-logo-white.svg" width="180px" class="brand-logo center material-icons" style="margin-top:8px">
+        </a>
+        <div class="right">
+            <!--<a class="waves-effect waves-light btn green accent-4">My Profile</a>-->
+            <a href="javascript:;" ng-click="vm.logOut()">
+                <i class="red material-icons small left">settings_power</i> Logout
+            </a>
+        </div>
     </div>
 </nav>

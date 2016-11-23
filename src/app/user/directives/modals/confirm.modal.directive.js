@@ -2,9 +2,9 @@ import template from './confirm.modal.tpl.html';
 import ConfirmModalController from './confirm.modal.controller';
 
 /* @ngInject */
-confirmModal.$inject = [];
+ConfirmModal.$inject = [];
 
-export default function confirmModal() {
+export default function ConfirmModal() {
     var directive = {
         restrict: 'E',
         template: template,

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             server: {
 
                 options: {
-                    port: 8081,
+                    port: 1234,
                     hostname: "0.0.0.0",
                     base: "dev/",
                     onCreateServer: function (server, connect, options) {

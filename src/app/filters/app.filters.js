@@ -1,5 +1,5 @@
 import 'angular';
-import byUserName from './username.filter';
-import byCredentials from './credentials.filter';
+import filterByUserName from './username.filter';
+import byCredentialsFilter from './credentials.filter';
 
-export default angular.module('app.filters', [byUserName, byCredentials]).name;
+export default angular.module('app.filters', [filterByUserName, byCredentialsFilter]).name;

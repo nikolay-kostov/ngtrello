@@ -10,5 +10,5 @@ function ConfirmModalController($scope) {
         $scope.action({
             item: $scope.item
         });
-    }
+    };
 }

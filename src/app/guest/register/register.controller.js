@@ -1,8 +1,8 @@
 export default RegisterController;
 
-RegisterController.$inject = ['UserService', 'ProfileService', 'byUserNameFilter', '$state'];
+RegisterController.$inject = ['UserService', 'ProfileService', 'filterByUserNameFilter', '$state'];
 
-function RegisterController (UserService, ProfileService, byUserName, $state) {
+function RegisterController (UserService, ProfileService, filterByUserName, $state) {
 
     var vm = this;
 
@@ -72,7 +72,7 @@ function RegisterController (UserService, ProfileService, byUserName, $state) {
 
         if(vm.registerForm.username.$valid) {
 
-            if(byUserName(users, vm.userData.username)){
+            if(filterByUserName(users, vm.userData.username)){
                 vm.ui.errors.taken = true;
             }else {
                 vm.ui.errors.taken = false;

@@ -1,5 +1,4 @@
 // Config main module
-
 export default config;
 
 config.$inject = [

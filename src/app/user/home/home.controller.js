@@ -19,7 +19,7 @@ function HomeController(BoardsService, ProfileService) {
     };
 
     let userId;
-    
+
     init();
 
     ////////////////
@@ -30,14 +30,13 @@ function HomeController(BoardsService, ProfileService) {
     }
 
     vm.deleteBoard = function (board) {
-
         vm.ui.modal.show = true;
         vm.ui.modal.title = board.name;
         vm.ui.modal.itemToDelete = board;
     };
 
     vm.confirmDelete = function (item){
-
+        console.log(board);
         if(!item.deleting) {
             item.deleting = true;
 
@@ -97,9 +96,9 @@ function HomeController(BoardsService, ProfileService) {
             }, function error(response) {
                 //TODO: error
             }
-        )
+        );
     };
-    
-    
+
+
 }
 

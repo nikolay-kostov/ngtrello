@@ -69,6 +69,11 @@ function BoardController($state, BoardsService, ProfileService) {
 
         // TODO : show error
     }
+
+    function logOut() {
+        ProfileService.unsetProfile();
+        $state.go(app.guest.home);
+    }
 }
 
 

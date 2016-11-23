@@ -1,5 +1,4 @@
 import 'angular';
-
 import headerUser from './header/header.user.directive';
 import confirmModal from './modals/confirm.modal.directive';
 
