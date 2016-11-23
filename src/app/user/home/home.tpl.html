@@ -1,29 +1,13 @@
 <div class="row boards">
     <div class="col s12">
         <div class="section">
-            <h5 class="blue-text center">Dashboard</h5>
+            <h5 class="blue-grey-text center">Dashboard</h5>
         </div>
         <div ng-show="vm.boards.length === 0 && !vm.ui.boardsLoading">
             <h1>You don't have any boards</h1>
         </div>
-        <div class="divider blue lighten-1"></div>
+        <div class="divider white-text"></div>
         <div class="row">
-            <!--<div class="card large hoverable grey lighten-1">
-                <span class="new badge blue " data-badge-caption="cards">{{board.cards.length}}</span>
-                <div class="card-content blue-text">
-                    <span class="card-title">{{board.name}}</span>
-                    <p class="card-details">{{board.createdAt *1000 | date:'yyyy-MM-dd'}}</p>
-
-                </div>
-                <div class="card-action lighten-1">
-                    <a href="javascript:;"
-                    ui-sref="app.user.board({id: board.id, board: board})"
-                    class="white-text"><i class="material-icons left small">web</i>
-                    </a>
-                    <a href="#modal" class="white-text" ng-click="vm.deleteBoard(board)"><i class="material-icons right small">delete</i></a>
-                </div>
-            </div>-->
-
             <div class="col s12 m3" ng-repeat="board in vm.boards">
                 <div class="card blue-grey  medium hoverable">
                     <span class="new badge grey " data-badge-caption="cards">{{board.cards.length}}</span>
@@ -39,15 +23,17 @@
                             class="white-text tooltipped" data-position="bottom" data-delay="10" data-tooltip="View Cards">
                                 <i class="material-icons left small">web</i>
                         </a>
-                        <a href="#modal" class="white-text modal-trigger" ng-click="vm.deleteBoard(board)"><i class="material-icons right small">delete</i></a>
+                        <a href="#modal" class="white-text" ng-click="vm.deleteBoard(board)"><i class="material-icons right small">delete</i></a>
                     </div>
                 </div>
             </div>
-
         </div>
-    <a href="javascript:;" ng-click="vm.createBoard()" class="btn-floating btn-large waves-effect waves-light blue-grey add">
-        <i class="material-icons">add</i>
-    </a>
+        <!--<a href="#newBoard" ng-click="vm.createBoard()" class="btn-floating btn-large waves-effect waves-light blue add">
+            <i class="material-icons">add</i>
+        </a>-->
+        <a href="#newBoard" class="btn-floating btn-large waves-effect waves-light blue add">
+            <i class="material-icons">add</i>
+        </a>
     </div>
 </div>
 
@@ -57,3 +43,11 @@
         data-action="vm.confirmDelete(item)"
         data-item="vm.ui.modal.itemToDelete">
 </confirm-modal>
+
+
+<board-modal
+        data-show="vm.ui.modal.show"
+        data-title="{{vm.ui.modal.title}}"
+        data-action="vm.confirmDelete(item)"
+        data-item="vm.ui.modal.itemToDelete">
+</board-modal>
