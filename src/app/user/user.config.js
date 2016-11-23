@@ -11,7 +11,7 @@ function config ($stateProvider) {
     $stateProvider.state("app.user", {
         abstract: true,
         template: '<header-user></header-user><div ui-view="user" class="page-wrapper admin"></div>',
-        controller: AdminController,
+        controller: UserController,
         controllerAs: 'vm'
     });
 }

@@ -4,7 +4,7 @@ export default UserController;
 /* @ngInject */
 UserController.$inject = ['SessionService'];
 
-function AdminController(SessionService) {
+function UserController(SessionService) {
     var vm   = this;
     vm.title = 'UserController';
 

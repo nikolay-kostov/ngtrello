@@ -11,10 +11,10 @@ config.$inject = ['$stateProvider'];
 
 function config ($stateProvider) {
 
-    $stateProvider.state("app.admin.logout", {
+    $stateProvider.state("app.user.logout", {
         url: "/logout",
         views: {
-            admin: {
+            user: {
                 template: template,
                 controllerAs: 'vm',
                 controller: LogoutController

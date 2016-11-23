@@ -11,10 +11,10 @@ config.$inject = ['$stateProvider'];
 
 function config ($stateProvider) {
 
-    $stateProvider.state("app.admin.home", {
+    $stateProvider.state("app.user.home", {
         url: "/boards",
         views: {
-            admin: {
+            user: {
                 template: template,
                 controllerAs: 'vm',
                 controller: HomeController

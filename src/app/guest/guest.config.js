@@ -11,13 +11,13 @@ function config ($stateProvider) {
     $stateProvider.state("app.guest", {
         abstract: true,
         controller: guestController,
-        // controllerAs: 'client',
+        // controllerAs: 'guest',
         template: '<header-guest></header-guest><div ui-view="guest" class="page-wrapper client"></div>'
     });
 
-    clientController.$inject = ['$scope'];
+    guestController.$inject = ['$scope'];
 
-    function clientController ($scope) {
+    function guestController ($scope) {
         $scope.inheritToChilds = 'true';
         this.appGuest = 'abstract app.guest';
     }
