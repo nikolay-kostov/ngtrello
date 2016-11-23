@@ -1,12 +1,12 @@
 
-export default AdminController;
-
-AdminController.$inject = ['SessionService'];
+export default UserController;
 
 /* @ngInject */
+UserController.$inject = ['SessionService'];
+
 function AdminController(SessionService) {
     var vm   = this;
-    vm.title = 'AdminController';
+    vm.title = 'UserController';
 
     activate();
 

@@ -1,5 +1,7 @@
 import template from './confirm.modal.tpl.html';
 import ConfirmModalController from './confirm.modal.controller';
+
+/* @ngInject */
 confirmModal.$inject = [];
 
 export default function confirmModal() {

@@ -1,5 +1,5 @@
 /***
- * Configure Home module
+ * Configure User Home module
  **/
 import template from './board.tpl.html';
 import BoardController from './board.controller';
@@ -10,10 +10,10 @@ config.$inject = ['$stateProvider'];
 
 function config ($stateProvider) {
 
-    $stateProvider.state("app.admin.board", {
+    $stateProvider.state("app.user.board", {
         url: "/board/:id",
         views: {
-            admin: {
+            user: {
                 template: template,
                 controller: BoardController,
                 controllerAs: 'vm'

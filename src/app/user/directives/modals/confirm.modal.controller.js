@@ -1,8 +1,8 @@
 export default ConfirmModalController;
 
+/* @ngInject */
 ConfirmModalController.$inject = ['$scope'];
 
-/* @ngInject */
 function ConfirmModalController($scope) {
 
     $scope.completeAction = function () {

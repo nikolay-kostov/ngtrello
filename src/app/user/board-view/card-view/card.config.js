@@ -1,5 +1,5 @@
 /***
- * Configure Home module
+ * Configure User Cards module
  **/
 import template from './card.tpl.html';
 
@@ -9,10 +9,10 @@ config.$inject = ['$stateProvider'];
 
 function config ($stateProvider) {
 
-    $stateProvider.state("app.admin.card", {
+    $stateProvider.state("app.user.card", {
         url: "/board/card",
         views: {
-            admin: {template: template}
+            user: {template: template}
         }
     });
 }

@@ -1,15 +1,13 @@
-import template from './header.admin.tpl.html';
+import template from './header.user.tpl.html';
 
-headerAdmin.$inject = [];
+headerUser.$inject = [];
 
-export default function headerAdmin() {
+export default function headerUser() {
     var directive = {
         restrict: 'E',
         template: template,
 
         link (scope, element, attr) {
-
-           
         }
     };
 

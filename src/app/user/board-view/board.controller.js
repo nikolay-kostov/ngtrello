@@ -17,9 +17,9 @@ function BoardController($state, BoardsService, ProfileService) {
     ////////////////
 
     function activate() {
-        
+
         if($state.params.board){
-            
+
             vm.board = $state.params.board;
         } else {
 
@@ -32,7 +32,7 @@ function BoardController($state, BoardsService, ProfileService) {
 
             } else {
 
-                $state.go('app.admin.home');
+                $state.go('app.user.home');
             }
         }
     }
@@ -58,7 +58,7 @@ function BoardController($state, BoardsService, ProfileService) {
 
         BoardsService.createCard(newCard,
             successCreateCard, failCreateCard
-        )
+        );
     };
 
     function successCreateCard(response){

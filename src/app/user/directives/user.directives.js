@@ -1,12 +1,12 @@
 import 'angular';
 
-import headerAdmin from './header/header.admin.directive';
+import headerUser from './header/header.user.directive';
 import confirmModal from './modals/confirm.modal.directive';
 
 var commonDepends = [];
 
 export default angular
-                    .module('admin.directives', commonDepends)
-                    .directive('headerAdmin', headerAdmin)
+                    .module('user.directives', commonDepends)
+                    .directive('headerUser', headerUser)
                     .directive('confirmModal', confirmModal)
                     .name;
