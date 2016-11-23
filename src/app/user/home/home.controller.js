@@ -36,7 +36,6 @@ function HomeController(BoardsService, ProfileService) {
     };
 
     vm.confirmDelete = function (item){
-        console.log(board);
         if(!item.deleting) {
             item.deleting = true;
 
