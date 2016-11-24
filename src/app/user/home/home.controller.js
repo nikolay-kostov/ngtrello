@@ -12,8 +12,12 @@ function HomeController(BoardsService, ProfileService) {
     vm.boards = [];
     vm.ui = {
         boardsLoading: true,
-        modal: {
+        confirmModal: {
             show : false,
+            title: ''
+        },
+        createModal: {
+            showBoard : false,
             title: ''
         }
     };
@@ -30,9 +34,9 @@ function HomeController(BoardsService, ProfileService) {
     }
 
     vm.deleteBoard = function (board) {
-        vm.ui.modal.show = true;
-        vm.ui.modal.title = board.name;
-        vm.ui.modal.itemToDelete = board;
+        vm.ui.confirmModal.show = true;
+        vm.ui.confirmModal.title = board.name;
+        vm.ui.confirmModal.itemToDelete = board;
     };
 
     vm.confirmDelete = function (item){

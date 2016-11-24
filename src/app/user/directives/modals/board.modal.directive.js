@@ -1,5 +1,5 @@
-import template from './createBoard.modal.tpl.html';
-import BoardModalController from './createBoard.modal.controller';
+import template from './board.modal.tpl.html';
+import BoardModalController from './board.modal.controller';
 
 /* @ngInject */
 BoardModal.$inject = [];

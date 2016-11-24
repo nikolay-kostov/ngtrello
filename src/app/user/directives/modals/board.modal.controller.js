@@ -6,7 +6,7 @@ BoardModalController.$inject = ['$scope'];
 function BoardModalController($scope) {
 
     $scope.completeAction = function () {
-        $scope.show = false;
+        $scope.showBoard = false;
         $scope.action({
             item: $scope.item
         });

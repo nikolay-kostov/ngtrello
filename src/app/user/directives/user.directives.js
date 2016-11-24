@@ -1,7 +1,7 @@
 import 'angular';
 import headerUser from './header/header.user.directive';
 import confirmModal from './modals/confirm.modal.directive';
-import boardModal from './modals/createBoard.modal.directive';
+import boardModal from './modals/board.modal.directive';
 
 var commonDepends = [];
 

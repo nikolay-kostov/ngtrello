@@ -1,15 +1,15 @@
-<div id="newBoard" class="modal grey lighten-2" ng-class="{open : show}">
+<div id="newBoard" class="modal grey lighten-2" ng-class="{open : showBoard}">
     <div class="modal-content">
       <h4>Delete Confirmation</h4>
       <div class="divider"></div>
       <!--<p>Are you sure you want to delete board: <b>{{title}}</b></p>-->
     </div>
     <div class="modal-footer">
-        <a class="modal-action waves-effect waves-green btn-flat" ng-click="show = false">Cancel</a>
+        <a class="modal-action waves-effect waves-green btn-flat" ng-click="showBoard = false">Cancel</a>
         <a class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="completeAction()">
            Delete
         </a>
 
     </div>
 </div>
-<div class="modal-overlay" ng-class="{open : show}"></div>
+<div class="modal-overlay" ng-class="{open : showBoard}"></div>
