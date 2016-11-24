@@ -8,7 +8,6 @@ HomeController.$inject = ['BoardsService', 'ProfileService'];
 function HomeController(BoardsService, ProfileService) {
     var vm   = this;
     vm.title = 'Home Controller';
-
     vm.boards = [];
     vm.ui = {
         boardsLoading: true,

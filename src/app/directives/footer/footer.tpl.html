@@ -1,7 +1,25 @@
+
+
 <div class="footer">
+    <!--<div class="input-field col s3 lang-select">
+        <select class="icons browser-default blue-grey white-text">
+            <option value="en_EN" >English</option>
+            <option value="bg_BG" >Bulgarian</option>
+        </select>
+    </div>-->
     <div class="footer-copyright">
         <div class="container">
             <p class="white-text center">© Copyright 2016, ng-Trello, Inc. All rights reserved.</p>
+            <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-small grey-blue center">
+      <!--<i class="small material-icons">translate</i>-->
+      {{vm.lang}}
+    </a>
+    <ul>
+      <li><a class="btn-floating  center" ng-click="changeLanguage('en_EN', 'EN')">EN</a></li>
+      <li><a class="btn-floating  center" ng-click="changeLanguage('bg_BG', 'BG')">BG</a></li>
+    </ul>
+  </div>
         </div>
     </div>
 </div>

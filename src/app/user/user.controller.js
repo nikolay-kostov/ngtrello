@@ -7,7 +7,7 @@ UserController.$inject = ['SessionService'];
 function UserController(SessionService) {
     var vm   = this;
     vm.title = 'UserController';
-
+    vm.back = '';
     activate();
 
     ////////////////

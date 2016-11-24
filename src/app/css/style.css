@@ -4,10 +4,6 @@
   max-width: 100%;
 }
 
-/*.page-wrapper {*/
-  /*height: calc(100vh - 64px);*/
-/*}*/
-
 .container .row {
   margin: 0 auto;
 }
@@ -18,7 +14,7 @@
   height: 50px !important;
   /*margin: auto !important;*/
   position: fixed !important;
-  background-color: #2196F3 !important;
+  background-color: #607d8b !important;
 }
 
 .add {
@@ -27,11 +23,11 @@
   right: 10px !important;
 }
 
-/*.hard-center {*/
-  /*position: absolute;*/
-  /*left: 50% !important;*/
-  /*transform: translate(-50%, 0%);*/
-/*}*/
+.hard-center {
+  position: absolute;
+  left: 50% !important;
+  transform: translate(-50%, 0%);
+}
 
 .card .card-action.above {
   padding: 10px;
@@ -39,23 +35,7 @@
   margin-bottom: -10px;
 }
 
-.modal.open {
-  /*display: block;
-  z-index: 1003;
-  transform: translate(0,-50%);*/
-  z-index: 1003;
-  display: block;
-  opacity: 1;
-  transform: scaleX(1);
-  top: 5%;
-}
-
-.modal-overlay.open{
-    z-index: 1002;
-    display: block;
-    opacity: 0.5;
-}
-
+.modal.open,
 .modal.openCreate {
   z-index: 1003;
   display: block;
@@ -64,56 +44,33 @@
   top: 5%;
 }
 
-.modal-overlay.openCreate{
+.modal-overlay.open,
+.modal-overlay.openCreate {
     z-index: 1002;
     display: block;
     opacity: 0.5;
 }
 
-/*.project .column {*/
-  /*overflow-x: hidden;*/
-/*}*/
+i.medium {
+    font-size: 4rem !important;
+    display: inline-block;
+}
 
-/*.project .column .card{*/
-  /*overflow-x: hidden;*/
-/*}*/
-/*@media only screen and (min-width: 751px) {*/
-  /*.project .scrollable-x {*/
-    /*white-space: nowrap;*/
-    /*overflow-x: scroll;*/
-  /*}*/
-/*}*/
+ nav a .waves-effect i{
+    display: inline;
+}
 
-/*.project .scrollable-x .column {*/
-  /*float: none;*/
-  /*display: inline-block;*/
-  /*vertical-align: top;*/
-  /*white-space: normal;*/
-  /*padding: 0 5px;*/
-/*}*/
+.lang-select {
+  position: fixed;
+   bottom: 4px !important;
+  right: 0;
+}
 
-/*@media only screen and (max-width: 750px) {*/
-  /*.project .scrollable-x .column {*/
-    /*float: left;*/
-    /*display: block;*/
-    /*vertical-align: top;*/
-  /*}*/
-/*}*/
+.fixed-action-btn.horizontal{
+  bottom: 5px;
+  right: 16px;
+}
 
-/*.column-wrapper {*/
-  /*height: calc(100vh - 330px);*/
-  /*overflow-y: scroll;*/
-  /*padding: 0 10px;*/
-/*}*/
-
-/*.column-wrapper::-webkit-scrollbar {*/
-  /*width: 0px;*/
-/*}*/
-
-/*.row .scrollable-x .col.l3 {*/
-  /*width: calc(25% - 25px);*/
-/*} */
-
-/*::-webkit-scrollbar { */
-    /*display: none; */
-/*}*/
+.fixed-action-btn.horizontal ul{
+  top: 17%;
+}

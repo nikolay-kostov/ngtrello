@@ -8,7 +8,10 @@ module.exports = function (grunt) {
                 files: ['src/*.html'],
                 tasks: ['copy:html']
             },
-
+            css: {
+                files: ['src/app/css/*.css'],
+                tasks: ['copy:styles']
+            },
             translations: {
                 files: ['src/app/translations/*.json'],
                 tasks: ['copy:translations']
@@ -38,6 +41,15 @@ module.exports = function (grunt) {
                     cwd: './src/app/translations',
                     src: ['**'],
                     dest: 'dev/translations'
+                }]
+            },
+
+            styles: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/app/css',
+                    src: ['**'],
+                    dest: 'dev/css'
                 }]
             },
 

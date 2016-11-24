@@ -1,12 +1,12 @@
-
 export default BoardController;
 
-BoardController.$inject = ['$state', 'BoardsService','ProfileService'];
-
 /* @ngInject */
-function BoardController($state, BoardsService, ProfileService) {
+BoardController.$inject = ['$scope','$state', 'BoardsService','ProfileService'];
+
+function BoardController($scope, $state, BoardsService, ProfileService) {
 
     var vm   = this;
+
     vm.title = 'Board Controller';
     vm.board = null;
 
@@ -21,6 +21,7 @@ function BoardController($state, BoardsService, ProfileService) {
         if($state.params.board){
 
             vm.board = $state.params.board;
+            console.log(vm.board)
         } else {
 
             if($state.params.id) {
@@ -41,10 +42,15 @@ function BoardController($state, BoardsService, ProfileService) {
 
         vm.board = response.result;
     }
+
     function failGetBoard(response){
 
         // TODO : show error
     }
+
+    vm.openModal = function(modal){
+
+    };
 
     vm.createCard = function () {
 
@@ -65,6 +71,7 @@ function BoardController($state, BoardsService, ProfileService) {
 
         vm.board.cards.push(response.result);
     }
+
     function failCreateCard(response){
 
         // TODO : show error
