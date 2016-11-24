@@ -1,0 +1,37 @@
+<div id="createModal" class="modal" ng-class="{openCreate : showModal}">
+    <div class="modal-content">
+      <h4>{{title}}</h4>
+
+      <div class="row">
+        <form class="col s12" name="createForm">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="board_name" type="text"
+                    ng-required="true" class="validate"
+                    ng-model="item.name">
+              <label for="board_name">Board Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <textarea id="board_description" type="text"
+                        class="materialize-textarea validate"
+                        ng-model="item.description">
+                </textarea>
+                <label for="board_description">Description</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="showModal = false">Cancel</a>
+        <a class="modal-action modal-close waves-effect waves-green btn-flat"
+            ng-disabled="createForm.$invalid"
+            ng-click="completeAction()">Save</a>
+    </div>
+
+</div>
+<div class="modal-overlay" ng-class="{openCreate : showModal}"></div>

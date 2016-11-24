@@ -28,10 +28,7 @@
                 </div>
             </div>
         </div>
-        <!--<a href="#newBoard" ng-click="vm.createBoard()" class="btn-floating btn-large waves-effect waves-light blue add">
-            <i class="material-icons">add</i>
-        </a>-->
-        <a href="#newBoard" class="btn-floating btn-large waves-effect waves-light blue add">
+        <a href="#createModal" ng-click="vm.showCreate()" class="btn-floating btn-large waves-effect waves-light blue add">
             <i class="material-icons">add</i>
         </a>
     </div>
@@ -45,9 +42,9 @@
 </confirm-modal>
 
 
-<board-modal
-        data-show="vm.ui.modal.show"
-        data-title="{{vm.ui.modal.title}}"
-        data-action="vm.confirmDelete(item)"
-        data-item="vm.ui.modal.itemToDelete">
-</board-modal>
+<create-modal
+        data-show-modal="vm.ui.createModal.showModal"
+        data-title="{{vm.ui.createModal.header}}"
+        data-action="vm.createBoard(item)"
+        data-item="vm.ui.createModal.newBoard">
+</create-modal>

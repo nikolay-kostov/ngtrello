@@ -17,8 +17,10 @@ function HomeController(BoardsService, ProfileService) {
             title: ''
         },
         createModal: {
-            showBoard : false,
-            title: ''
+            showModal : false,
+            header: '',
+            title: '',
+            description: ''
         }
     };
 
@@ -76,6 +78,18 @@ function HomeController(BoardsService, ProfileService) {
         vm.ui.boardsLoading = false;
     }
 
+    /***
+     * Open modal window to create new board
+     */
+    vm.showCreate = function () {
+        vm.ui.createModal.showModal = true;
+        vm.ui.createModal.header = 'Create new Board';
+        vm.ui.createModal.newBoard = {
+            name : '',
+            description : '',
+        };
+        console.log(vm.ui.createModal.showModal);
+    };
 
 
     /***
@@ -83,14 +97,12 @@ function HomeController(BoardsService, ProfileService) {
      * - show modal to enter Board name
      * - modal must have 2 button - save, cancel
      */
-    vm.createBoard = function () {
-
-        var title = prompt("Enter board name: ");
-
+    vm.createBoard = function (board) {
         var newBoard = {
-            name: title,
+            name: board.name,
             userId: userId
         };
+
 
         BoardsService.createBoard(newBoard,
             function success(response) {
