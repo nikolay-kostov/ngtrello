@@ -23,7 +23,7 @@
                             class="white-text tooltipped" data-position="bottom" data-delay="10" data-tooltip="View Cards">
                                 <i class="material-icons left small">web</i>
                         </a>
-                        <a href="#modal" class="white-text" ng-click="vm.deleteBoard(board)"><i class="material-icons right small">delete</i></a>
+                        <a href="#confirmModal" class="white-text" ng-click="vm.deleteBoard(board)"><i class="material-icons right small">delete</i></a>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,6 @@
         data-action="vm.confirmDelete(item)"
         data-item="vm.ui.confirmModal.itemToDelete">
 </confirm-modal>
-
 
 <create-modal
         data-show-modal="vm.ui.createModal.showModal"

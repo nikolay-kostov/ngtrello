@@ -1,58 +1,36 @@
 <div class="row project">
     <div class="col s12">
         <div class="section">
-            <h4 class="blue-grey-text">Cards in {{vm.board.name}}</h2>
+            <h4 class="blue-grey-text">Cards in {{vm.board.name}}</h4>
         </div>
         <div class="divider black"></div>
-        <div class="col s12 scrollable-x">
-            <div class="col s12 m6 l3 column">
-            <div ng-show="vm.board.cards.length === 0 && !vm.ui.boardsLoading" class="center">
-                <h5>No active cards.</h5>
-            </div>
-
-            <div class="column-wrapper">
-                <div class="card hoverable blue-grey lighten-1" ng-repeat="card in vm.board.cards">
-                    <div class="card-action above">
-                        <a href="javascript:;" class="teal-text"><i class="material-icons left small white-text">bookmark_border</i></a>
-                        <a href="javascript:;" class="teal-text"><i class="material-icons right small white-text">clear</i></a>
-                    </div>
+        <div ng-show="vm.board.cards.length === 0" class="center">
+            <h5 class="blue-grey-text">No active cards.</h5>
+        </div>
+        <div class="row">
+            <div class="col s12 m3" ng-repeat="card in vm.board.cards">
+                <div class="card blue-grey  medium hoverable">
                     <div class="card-content white-text">
-                        <p>{{card.name}}</p>
-                        <p>{{card.text_content}}</p>
+                        <span class="card-title">{{card.name}}</span>
+                        <p class="card-details">{{card.createdAt *1000 | date:'yyyy-MM-dd'}}</p>
+                        <p class="card-content">{{card.text_content}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a ui-href="#confirmModal" class="white-text" style="cursor:pointer"
+                            ng-click="vm.deleteCard(card)">
+                            <i class="material-icons right small">delete</i>
+                        </a>
                     </div>
                 </div>
-
             </div>
-
-             <a href="#createModal" ng-click="vm.showCreate()" class="btn-floating btn-large waves-effect waves-light blue-grey add">
-                <i class="material-icons">add</i>
-            </a>
-
-            <!--<div class="card-panel hoverable blue-grey center">
-                <a href="javascript:;" ng-click="vm.createCard()" class="white-text">
-                    <i class="material-icons small white-text">add_circle</i>
+            <a ui-href="#createModal" style="cursor:pointer"
+                    ng-click="vm.openModal()"
+                    class="btn-floating btn-large waves-effect waves-light blue-grey add">
+                    <i class="material-icons">add</i>
                 </a>
-            </div>-->
-        </div>
-
         </div>
     </div>
 </div>
-
-<!--<div id="card" class="modal teal lighten-5">
-    <div class="modal-content orange lighten-1">
-      <h4 class="white-text">Card title</h4>
-      <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod pariatur quis vero.</b></p>
-    </div>
-    <div class="modal-content">
-      <div class="divider orange lighten-1"></div>
-      <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Rem molestiae tempora sit ab illo, sequi facere odio, numquam inventore eius,
-          modi non soluta obcaecati officia corporis. Adipisci, sint, incidunt? In!
-      </p>
-    </div>
-</div>-->
 
 <confirm-modal
         data-show="vm.ui.confirmModal.show"
@@ -60,7 +38,6 @@
         data-action="vm.confirmDelete(item)"
         data-item="vm.ui.confirmModal.itemToDelete">
 </confirm-modal>
-
 
 <create-modal
         data-show-modal="vm.ui.createModal.showModal"

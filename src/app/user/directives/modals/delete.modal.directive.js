@@ -2,9 +2,9 @@ import template from './confirm.modal.tpl.html';
 import ConfirmModalController from './confirm.modal.controller';
 
 /* @ngInject */
-ConfirmModal.$inject = [];
+DeleteModal.$inject = [];
 
-export default function ConfirmModal() {
+export default function DeleteModal() {
     var directive = {
         restrict: 'E',
         template: template,
@@ -20,6 +20,7 @@ export default function ConfirmModal() {
     };
 
     var linkFunction = function(scope, element, attrs) {
+        console.log(scope);
     };
 
     return directive;

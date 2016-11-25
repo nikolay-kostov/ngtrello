@@ -5,12 +5,13 @@ BoardsService.$inject = ['$resource','API_URL'];
 /* @ngInject */
 function BoardsService($resource, API_URL) {
 
-    var URL = API_URL + 'users/:userId/:action/:boardId/:createCard';
+    var URL = API_URL + 'users/:userId/:action/:boardId/:cardAction/:cardId';
     var defaultParams = {
         userId: '@userId',
         action: '@action',
         boardId: '@boardId',
-        createCard: '@createCard'
+        cardAction: '@cardAction',
+        cardId: '@cardId'
     };
 
     return $resource(URL, defaultParams, {
@@ -63,10 +64,25 @@ function BoardsService($resource, API_URL) {
             method: 'POST',
             params: {
                 action: 'boards',
-                createCard: 'cards'
+                cardAction: 'cards'
             },
             isArray: false
-        }
+        },
+        /***
+         * Delete card
+         *  @param {Number} userId
+         *  @param {Number} boardId
+         *  @param {Number} cardId
+         */
+        deleteCard: {
+            method: 'DELETE',
+            params: {
+                action: 'boards',
+                cardAction: 'cards'
+            },
+            isArray: false
+        },
+
     });
 }
 

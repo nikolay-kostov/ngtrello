@@ -1,10 +1,9 @@
 import _ from 'underscore';
-
 export default HomeController;
 
+/* @ngInject */
 HomeController.$inject = ['BoardsService', 'ProfileService'];
 
-/* @ngInject */
 function HomeController(BoardsService, ProfileService) {
     var vm   = this;
     vm.title = 'Home Controller';
@@ -87,7 +86,6 @@ function HomeController(BoardsService, ProfileService) {
             name : '',
             description : '',
         };
-        console.log(vm.ui.createModal.showModal);
     };
 
 

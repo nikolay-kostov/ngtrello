@@ -1,4 +1,4 @@
-<div id="createModal" class="modal" ng-class="{openCreate : showModal}">
+<div id="createModal" class="modal" ng-class="{open : showModal}">
     <div class="modal-content">
       <h4>{{title}}</h4>
 
@@ -6,10 +6,10 @@
         <form class="col s12" name="createForm">
           <div class="row">
             <div class="input-field col s12">
-              <input id="board_name" type="text"
+              <input id="item_name" type="text"
                     ng-required="true" class="validate"
                     ng-model="item.name">
-              <label for="board_name">Board Name</label>
+              <label for="item_name">Name</label>
             </div>
           </div>
           <div class="row">
@@ -34,4 +34,4 @@
     </div>
 
 </div>
-<div class="modal-overlay" ng-class="{openCreate : showModal}"></div>
+<div class="modal-overlay" ng-class="{open : showModal}"></div>
