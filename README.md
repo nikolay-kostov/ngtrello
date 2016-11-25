@@ -30,3 +30,16 @@ $ npm install
 ```sh
 $ bower install
 ```
+####4. Run Project
+
+```sh
+$ cd `project-directory`
+```
+
+```sh
+$ in command promt: $ grunt
+```
+
+```sh
+Open browser and type http://localhost:1234
+```
