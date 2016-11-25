@@ -13,11 +13,12 @@ export default function footer() {
     };
 
 
-    footerController.$inject = ['$scope', '$translate', '$localStorage'];
+    footerController.$inject = ['$scope', '$translate', '$localStorage', '$window'];
 
-    function footerController ($scope, $translate, $localStorage) {
+    function footerController ($scope, $translate, $localStorage, $window) {
         var vm = this;
         vm.lang = 'EN';
+        vm.lang = ($window.localStorage.getItem("NG_TRANSLATE_LANG_KEY")).substr(3);
         //
         vm.title = $scope.title;
 
@@ -30,5 +31,7 @@ export default function footer() {
 
     return directive;
 
-    function link() {}
+    function link() {
+
+    }
 }

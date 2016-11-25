@@ -1,4 +1,4 @@
-<h3 class="center grey-text text-darken-2" translate>guest.loginPage.login</h3>
+<h3 class="center grey-text text-darken-2">{{'guest.loginPage.login' | translate }}</h3>
 <h6 class="center grey-text text-darken-1">{{'guest.loginPage.notMember' | translate }}
     <a ui-sref="app.guest.register">{{'guest.loginPage.createAccount' | translate }}</a>
 </h6>
@@ -8,20 +8,20 @@
         <div class="input-field col s12">
             <i class="small material-icons prefix">assignment_ind</i>
             <input id="username" ng-required="true" ng-model="vm.userData.username" name="username" type="text">
-            <label for="username">{{vm.translations.username}}</label>
+            <label for="username">{{'guest.loginPage.username' | translate }}</label>
         </div>
         </div>
         <div class="row">
         <div class="input-field col s12">
                 <i class="small material-icons prefix">lock_open</i>
             <input id="password" ng-required="true" ng-model="vm.userData.password" name="password" type="password">
-            <label for="password">{{vm.translations.password}}</label>
+            <label for="password">{{'guest.loginPage.password' | translate }}</label>
         </div>
         </div>
         <div class="submit-field col s12" style="text-align:right">
             <button ng-disabled="vm.loginForm.$invalid"
                     class="btn-large waves-effect waves-light grey accent-4" type="submit" name="action">
-                Login
+                {{'guest.loginPage.btnLogin' | translate }}
                 <i class="material-icons right">input</i>
             </button>
         </div>

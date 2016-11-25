@@ -16,19 +16,36 @@
 
   "guest": {
 
+    "header": {
+        "loginBtn": "Log In",
+        "registerBtn": "Register"
+    },
+
     "home": {
 
     },
     "loginPage": {
       "login": "Log in to ngTrello",
+      "btnLogin": "Login",
       "username": "Username",
       "password": "Password",
       "welcome": "Welcome back!",
       "notMember": "Don’t have an account?",
       "createAccount": "Create a ngTrello account."
     },
-    "register": {
-
+    "registerPage": {
+      "title": "Registration Form",
+      "username": "Username",
+      "password": "Password",
+      "first_name": "First Name",
+      "email": "E-mail",
+      "btnRegister": "Register"
+    },
+    "registerErrors": {
+      "takenUsername": "This username is already taken!",
+      "invalidUsername" : "Invalid username.",
+      "invalidPassword" : "Invalid password.",
+      "invalidEmail" : "Invalid email."
     }
   },
 

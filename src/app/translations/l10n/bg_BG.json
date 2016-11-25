@@ -1,34 +1,51 @@
 {
   "common": {
     "ok": "ok",
-    "cancel": "cancel",
-    "save": "save",
-    "close": "close"
+    "cancel": "отказ",
+    "save": "запис",
+    "close": "затвори"
   },
 
   "errors": {
 
     "loginErrors": {
-      "invalidUsername" : "Username is not valid!",
-      "invalidPassword" : "Wrong password"
+      "invalidUsername" : "Невалидно потребителско име.",
+      "invalidPassword" : "Грешна парола."
     }
   },
 
   "guest": {
 
+    "header": {
+        "loginBtn": "Вход",
+        "registerBtn": "Регистрация"
+    },
+
     "home": {
 
     },
     "loginPage": {
-      "login": "Log in to ngTrello",
-      "username": "Username",
-      "password": "Password",
-      "welcome": "Welcome back!",
-      "notMember": "Don’t have an account?",
-      "createAccount": "Create a ngTrello account."
+      "login": "Вход в ngTrello",
+      "btnLogin": "Вход",
+      "username": "Потребителско име",
+      "password": "Парола",
+      "welcome": "Здравей отново!",
+      "notMember": "Нямате още акаунт?",
+      "createAccount": "Създайте ngTrello акаунт."
     },
-    "register": {
-
+    "registerPage": {
+      "title": "Регистрационна форма",
+      "username": "Потребителско име",
+      "password": "Парола",
+      "first_name": "Име",
+      "email": "Ел.Поща",
+      "btnRegister": "Регистрирай ме"
+    },
+    "registerErrors": {
+      "takenUsername": "Потребителското име е вече заето!",
+      "invalidUsername" : "Невалидно потребителско име.",
+      "invalidPassword" : "Невалидно парола.",
+      "invalidEmail" : "Невалидна ел.поща."
     }
   },
 

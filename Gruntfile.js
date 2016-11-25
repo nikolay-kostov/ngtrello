@@ -38,7 +38,7 @@ module.exports = function (grunt) {
             translations: {
                 files: [{
                     expand: true,
-                    cwd: './src/app/translations',
+                    cwd: 'src/app/translations',
                     src: ['**'],
                     dest: 'dev/translations'
                 }]
